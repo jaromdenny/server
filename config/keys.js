@@ -2,8 +2,8 @@
 
 if (process.env.NODE_ENV === 'production') {
 	//in Prod
-	module.exports = require dev('./prod');
+	module.exports = require('./prod');
 } else {
 	//in Dev
-	module.exports = require dev('./dev');
+	module.exports = require('./dev');
 }
