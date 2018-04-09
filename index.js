@@ -29,8 +29,8 @@ if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 	//serve up index.html on routes
 	const path = require('path');
-	app.get('*', (res, req) => {
-		res.sendfile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+	app.get('*', (req, res) => {
+		res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 	});
 }
 
